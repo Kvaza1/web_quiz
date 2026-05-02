@@ -1,0 +1,14 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Викторина</title>
+</head>
+<body>
+    <h1>Добро пожаловать в викторину!</h1>
+    <form method="POST">
+        <input type="hidden" name="quiz_id" value="1">
+        <button type="submit">Начать викторину</button>
+    </form>
+</body>
+</html>

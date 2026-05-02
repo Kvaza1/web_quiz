@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Вопрос</title>
+</head>
+<body>
+    <h2>{{ question_text }}</h2>
+    <form action="/save_answer" method="POST">
+        {% for ans in answers %}
+            <input type="radio" name="ans_text" value="{{ ans }}" required> {{ ans }}<br>
+        {% endfor %}
+        <input type="hidden" name="q_id" value="{{ q_id }}">
+        <br><input type="submit" value="Ответить">
+    </form>
+</body>
+</html>
